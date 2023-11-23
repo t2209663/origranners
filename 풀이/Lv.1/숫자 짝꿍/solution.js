@@ -11,6 +11,7 @@ function solution(X, Y) {
 	});
 
 	let str = "";
+
 	for(let num in objX){
 		if(objX[num] && objY[num]){
 			str += num.repeat(Math.min(objX[num],objY[num]));
@@ -18,7 +19,9 @@ function solution(X, Y) {
 	}
 
 	answer = str.split("").sort((a,b) => b-a);
+
 	if(answer.length === 0) return "-1";
+
 	if(answer[0] === "0") return "0";
 
 	return answer.join("");
